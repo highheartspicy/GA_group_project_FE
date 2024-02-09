@@ -3,109 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Quiz app Interface</title>
-    <link rel="stylesheet" href="2nd.css">
+    <!-- <link rel="stylesheet" href="2nd.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<div class="content">
- <!--For the Time-->
- <div class="main-background">
-    <div class="time">
+    <div class="flex bg-purple-300 items-center justify-center min-h-screen">
+        <div class=" flex flex-col bg-white rounded-lg ">
+            <!-- the top part -->
+            <div class="relative grid grid-cols-4 px-6 bg-[#7D32B5] mb-10 pb-20 gap-2 rounded-b-xl rounded-t-xl">
+               <div class="flex justify-end">
+                <div class=" flex items-end">
+                    <div class="flex flex-col">
+                        <div class=" flex items-center justify-center">
+                        <img 
+                        src="../image/gem.png"
+                         alt=""
+                         class="object-contain h-10  p-1  mb-2 border border-2 border-[#9038D2] rounded-full"
+                         >
+                         </div>
+                       <div class="bg-[#9038D2] w-[140%] text-white text-center text-lg py-1 rounded-2xl md:w-[120%]">65 Gems</div> </div>
 
-    </div>
-<!--For the iphone Status bar-->
-<div id="status-bar">
-    <div id="network-signal">
+                    </div>
+                   
+               </div>
+
+                <div class="flex flex-col px-10 col-span-2 col-start-2 mt-6 mb-10 md:mt-10 md:mb-4   " >
+                    <img
+                     src="../image/female.png" 
+                     alt="User Avatar"
+                     class="object-contain h-20 "
+                     >
+                     <div class="bg-[#9038D2]  w-[200%] text-white text-center text-lg ml-[-15px] md:w-[120%]  md:ml-0 rounded-2xl">Elizabeth</div>
+                </div>    
+                    
+                
+
+                <div class="flex  items-end " >
+                    <div class="flex flex-col">
+                        <div class=" flex items-center justify-center">
+                            <img 
+                            src="../image/Gold coin.png"
+                             alt=""
+                             class="object-contain h-10  p-1  mb-2 border border-2 border-[#9038D2] rounded-full"
+                             >
+                        </div>
+                            
+                        
+                       
+                    <div class="bg-[#9038D2] w-[140%] mr-[-10px] text-white text-center text-lg py-1 rounded-2xl md:mr-0 md:w-[120%]">Rs 2000</div>
+                </div>
+                    </div>
+                     <!-- <div class=" "> -->
+                   <button class=" py-2 w-[80%] bg-[#6F7BE6] rounded-2xl
+                   absolute top-[92%] left-[10%]   md:top-[92%] md:left-[10%]  
+                   ">
+                    <span class="text-center">🤔 How to play</span>
+                   </button>
+                <!-- </div> -->
+                    
+                </div>
+               
+                <!-- the quiz parts -->
+                <!-- part 1 -->
+                <div class="relative flex flex-row bg-gradient-to-r from-[#22CCF2] to-[#11B0E4] mx-2 mb-6 px-2 rounded-xl">
+                    
+                        <div class="flex flex-col space-y-2 mb-4 group">
+                            <h1 class="font-bold text-white text-2xl">Test Question</h1>
+                       <p class="w-56 text-white text-sm">Do you want to test your knowledge on some particular
+                         question to know how fit you are for the exam.
+                          </p>
+                        <button class="bg-gray-600 opacity-90 py-2 w-[120px] rounded-xl duration-500 transition group-hover:bg-opacity-50  hover:translate-x-1">
+                            <a 
+                            href="#"
+                            class=" text-white ">
+                                Click Here</a>
+                        </button>
+                        </div>
+                      
+                        <div class="py-2 absolute left-[80%] ">
+                            <img 
+                            src="../image/side.png" 
+                            alt="man standing" 
+                            class=" h-40">
+                        </div>
+                    
+                </div>
+                <!-- part 2 -->
+                <div class="relative flex flex-row bg-gradient-to-r from-[#F85D85] to-[#E83658] mx-2 mb-6 px-2 rounded-xl">
+                    
+                    <div class="flex flex-col space-y-2 mb-4 group">
+                        <h1 class="font-bold text-white text-2xl">Daily Question</h1>
+                   <p class="w-56 text-white text-sm">Do you want to test your knowledge on some particular
+                     question to know how fit you are for the exam.
+                      </p>
+                    <button class="bg-[#C41C40] opacity-90 py-2 w-[120px] rounded-xl duration-500 transition group-hover:bg-opacity-50  hover:translate-x-1">
+                        <a 
+                        href="#"
+                        class=" text-white">
+                            Click Here</a>
+                    </button>
+                    </div>
+               
+                    <div class="py-2 absolute left-[80%] ">
+                        <img 
+                        src="../image/side.png" 
+                        alt="man standing" 
+                        class=" h-40">
+                    </div>
+                   
+            </div>
+            <!-- part 3 -->
+            <div class="relative flex flex-row bg-gradient-to-r from-[#F0AB38] to-[#F3BB23] mx-2  px-2 rounded-xl">
+                    
+                <div class="flex flex-col space-y-2 mb-4 group">
+                    <h1 class="font-bold text-white text-2xl">Bronze</h1>
+               <p class="w-56 text-white text-sm">Do you want to test your knowledge on some particular
+                 question to know how fit you are for the exam.
+                  </p>
+                <button class="bg-[#F0DF38] opacity-90 py-2 w-[120px] rounded-xl duration-500 transition group-hover:bg-opacity-50  hover:translate-x-1">
+                    <a 
+                    href="#"
+                    class=" text-white">
+                        Click Here</a>
+                </button>
+                </div>
+          
+                <div class="py-2 absolute left-[80%] ">
+                    <img 
+                    src="../image/side.png" 
+                    alt="man standing" 
+                    class=" h-40">
+                </div>
+                
+             
+        </div>
+        <div class="sticky bottom-0 right-0 left-0 w-[100%] mx-auto bg-white rounded-xl overflow-hidden">
+            <div class=" flex flex-row justify-between p-4 md:py-1">
+                <i class="fa-solid fa-trophy fa-5xs transition hover:translate-x-1 duration-200"></i>
+                <i class="fa-brands fa-dribbble fa-5xs transition hover:translate-x-1 duration-200"></i>
+                <i class="fa-solid fa-house fa-5xs bg-[#7D32B5] px-2 py-1 rounded-lg transition hover:translate-x-1 duration-200"></i>
+                <i class="fa-solid fa-cart-shopping fa-5xs transition hover:translate-x-1 duration-200"></i>
+                <i class="fa-regular fa-circle-user fa-5xs transition hover:translate-x-1 duration-200"></i>
+            </div>
+        </div>
+
+        </div>
         
     </div>
-    <div id="wifi-signal">
     </div>
-    <div id="battery-signal">
-    </div>
-</div>
- <!-- For dashboard -->
 
- <div id="avatar">
-    <img src="/image/female.png" alt="User Avatar">
-</div>
-<div class="circle-container">
-</div>
-<div class="circle-container-coin">
-    <div class="coin-logo"></div>
-</div>
-<div class="styled-text">Elizabeth</div>
-<div id="gems">65 Gems</div>
-<div id="coins">Rs 2000</div>
-<div class="play">
-   🤔 How to play
-</div>
-</div>
-<div class="grid">
-    <div class="big_container">
-<!-- first box -->
-<div class="first_container">
-<div class="first_phase">
-    <article>Click below and <br>jump to the Quiz!</article>
-    <button><a href="#">Click Here</a></button>
-    <img src="/image/side.png" alt="man standing" class="img">
-    <div class="empty">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-</div>
-
-<!-- secondbox -->
-
-</div>
-<div class="sec_container">
-    <div class="items">
-    <h1 class="daily">Daily Quiz</h1>
-     <p class="paddy">It is a long established  <br>fact that a reader  <br>will be distracted by  the <br>readable content.</p>
-    <a href="contact.html">  <button class="cta-button">Start Quiz</button></a>
-    <img src="/image/side.png" alt="man standing" class="img tag">
-    <div class="empty tags">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-    </div>
-    <div class="third_container"> 
-        <div  id="third" class="sec_container" >
-            <div class="items">
-            <h1 class="daily">Quiz Time</h1>
-             <p class="paddy">It is a long established  <br>fact that a reader  <br>will be distracted by  the <br>readable content.</p>
-            <a href="contact.html">  <button class="cta-button">Start Quiz</button></a>
-            <img src="/image/side.png" alt="man standing" class="img tag">
-            <div class="empty tags">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-   
-    <footer>
-        <div class="footer_container">
-            <div class="icons-footer">
-                <i class="fa-solid fa-trophy fa-5xs"></i>
-                <i class="fa-brands fa-dribbble fa-5xs"></i>
-                <i class="fa-solid fa-house fa-5xs"></i>
-                <i class="fa-solid fa-cart-shopping fa-5xs"></i>
-                <i class="fa-regular fa-circle-user fa-5xs"></i>
-            </div>  
-    </footer>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
